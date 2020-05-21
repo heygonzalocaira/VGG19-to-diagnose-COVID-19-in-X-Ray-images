@@ -29,12 +29,12 @@ tamano_pool = (2, 2)
 longitud, altura = 224, 224
 
 
-epocas=5
-batch_size = 32 #10
-pasos = 1000
-validation_steps = 300
+epocas=50
+batch_size = 7 #10
+pasos = 10
+#validation_steps = 300
 clases = 2
-lr = 0.0004
+lr = 0.0001
 
 
 entrenamiento_datagen = ImageDataGenerator(
@@ -107,26 +107,11 @@ model.fit_generator(
     steps_per_epoch=pasos,
     epochs=epocas,
     validation_data=validacion_generador,#y_train
-    validation_steps=validation_steps)
-
+    #validation_steps=validation_steps)
+)
 # Guardar el Model
 target_dir = './modelo/'
 if not os.path.exists(target_dir):
   os.mkdir(target_dir)
 model.save('./modelo/modelo.h5')
 model.save_weights('./modelo/pesos.h5')
-"""
-x_train ='./dataset/Train'
-#y_train =
-x_train = x_train.astype('float32') / 255
-
-model.compile(loss='sparse_categorical_crossentropy',
-              optimizer=keras.optimizers.RMSprop())
-history = model.fit(x_train, y_train,
-                    batch_size=64,
-                    steps_per_epoch=pasos,
-                    epochs=epocas,
-                    validation_steps=validation_steps)
-
-print("hola")
-"""
