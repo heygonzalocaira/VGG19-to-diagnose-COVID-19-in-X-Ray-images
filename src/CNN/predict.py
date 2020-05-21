@@ -20,6 +20,7 @@ def predict(file):
     print("Lungs with Covid")
   elif answer == 1:
     print("Normal lungs")
-
-
   return answer
+
+file = input("Name of file : ")
+predict(file)
