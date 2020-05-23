@@ -5,7 +5,8 @@ __pycache__/
 
 # C extensions
 *.so
-
+#ignore modelo
+src/CNN/modelo
 # Distribution / packaging
 .Python
 build/

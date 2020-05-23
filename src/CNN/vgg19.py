@@ -97,7 +97,7 @@ outputs = layers.Dense(clases, activation="softmax", name='predictions')(x)
 
 model = keras.Model(inputs=inputs, outputs=outputs, name='vgg19')
 model.summary()
-
+ 
 model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=lr, name='Adam'),  
     loss='categorical_crossentropy',
     metrics=['accuracy'])
