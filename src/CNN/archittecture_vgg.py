@@ -105,4 +105,4 @@ if not os.path.exists(target_dir):
   os.mkdir(target_dir)
 cnn.save('./modelo/modelo.h5')
 cnn.save_weights('./modelo/pesos.h5')
-print("hola")
+#print("(UwU")
