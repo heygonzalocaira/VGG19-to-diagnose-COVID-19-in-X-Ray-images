@@ -56,7 +56,7 @@ pip install --upgrade numpy
 First clone the repository 
 
 ```
-git clone https://github.com/madscientist98/VGG19-to-diagnose-COVID-19-in-X-Ray-images.git
+git clone https://github.com/madscientistCS/VGG19-to-diagnose-COVID-19-in-X-Ray-images.git
 ```
 run train 
 ```
